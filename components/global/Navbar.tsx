@@ -36,11 +36,16 @@ export default function Navbar() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <NavigationMenuLink>Link</NavigationMenuLink>
+                  <NavigationMenuLink >
+                    <div className="flex">
+                        <div className="">
+                            <h1></h1>
+                        </div>
+                    </div>
+                  </NavigationMenuLink>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
