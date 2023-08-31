@@ -17,7 +17,7 @@ import { Button } from "../ui/button";
 
 export default function Navbar() {
   return (
-    <div className="bg-white shadow p-4">
+    <div className="z-50 bg-white p-4 shadow fixed top-0 w-full">
       <div className="container flex justify-between items-center">
         <div className="flex-1">
           <h1 className="text-2xl font-bold text-gray-700">YAMI</h1>
@@ -38,7 +38,14 @@ export default function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Our Menu</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink>Link</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <NavigationMenuLink>Link</NavigationMenuLink>
                 </NavigationMenuContent>
@@ -54,7 +61,7 @@ export default function Navbar() {
 
             </NavigationMenuList>
           </NavigationMenu>
-          {false && <Button>login</Button>}
+          {true && <Button>login</Button>}
         </div>
       </div>
     </div>
