@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 
 export default function Navbar() {
   return (
@@ -22,26 +23,38 @@ export default function Navbar() {
           <h1 className="text-2xl font-bold text-gray-700">YAMI</h1>
         </div>
         <div>
-          <Input className="min-w-[400px]" placeholder="search here"/>
+          <Input className="min-w-[400px]" placeholder="search here" />
         </div>
         <div className="flex-1 flex justify-end">
-            <NavigationMenu >
+          <NavigationMenu className="px-4">
             <NavigationMenuList>
-                <NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link href="#" legacyBehavior passHref>
-                    <NavigationMenuLink className="px-4 py-2">
+                  <NavigationMenuLink className="px-4 py-2">
                     Home
-                    </NavigationMenuLink>
+                  </NavigationMenuLink>
                 </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                <NavigationMenuTrigger>our Menu</NavigationMenuTrigger>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Our Menu</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                    <NavigationMenuLink>Link</NavigationMenuLink>
+                  <NavigationMenuLink>Link</NavigationMenuLink>
                 </NavigationMenuContent>
-                </NavigationMenuItem>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Cart</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink>Link</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+
             </NavigationMenuList>
-            </NavigationMenu>
+          </NavigationMenu>
+          {false && <Button>login</Button>}
         </div>
       </div>
     </div>
