@@ -19,9 +19,24 @@ import {FaHeart} from "react-icons/fa6";
 import { useRouter } from 'next/navigation';
 
 
+interface Store {
+  storename: string;
+  location: {
+      lat: number;
+      lng: number;
+  };
+  rating: {
+      rating: number;
+      numberofRaters: number;
+  };
+  storeimage: string;
+  storeAvatar: string;
+  description: string;
+  isopen: boolean;
+}
 
 
-export default function StoreCard() {
+export default function StoreCard({store}:{store:Store}) {
     const router = useRouter();
   return (
         <div onClick={()=>router.push("/store/hello")} className='w-full cursor-pointer duration-150 group rounded-xl shadow  text-gray-700 bg-white h-fit '>
@@ -47,9 +62,9 @@ export default function StoreCard() {
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                         <div>
-                            <h1 className='text-md font-bold'>store name</h1>
+                            <h1 className='text-md font-bold'>{store.storename}</h1>
                             <h1 className='text-sm font-semibold text-gray-500'>6.5 km , 30 min , 0 dh delivery fee</h1>
-                            <h1 className='text-sm font-semibold text-gray-500 flex items-center'>4.6 <FaStar className="inline-block ml-1 mr-2"/> (320) </h1>
+                            <h1 className='text-sm font-semibold text-gray-500 flex items-center'>{store.rating.rating} <FaStar className="inline-block ml-1 mr-2"/> ({store.rating.numberofRaters}) </h1>
                         </div>
                 </div>
             </div>
@@ -62,3 +77,21 @@ export default function StoreCard() {
 
 
 
+// interface Store {
+//   storename: string;
+//   location: {
+//       lat: number;
+//       lng: number;
+//   };
+//   rating: {
+//       rating: number;
+//       numberofRaters: number;
+//   };
+//   storeimage: string;
+//   storeAvatar: string;
+//   description: string;
+//   isopen: boolean;
+//   isLiked: boolean;
+//   destance: number;
+//   deliveryTimeByMin:number;
+// }

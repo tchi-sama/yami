@@ -6,7 +6,7 @@ import React from 'react'
 export default function HomePage() {
   return (
     <div className='bg-gray-100 pt-32 min-h-screen'>
-        <Navbar/>
+        <Navbar dlr={true}/>
         <div className='container '>
             <h1 className='text-5xl text-gray-700 font-bold'>Categories</h1>
             <Categories/>

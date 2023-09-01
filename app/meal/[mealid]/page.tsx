@@ -11,7 +11,7 @@ import FeedCard from '@/components/global/FeedCard'
 export default function page(props:any) {
   return (
     <div>
-        <Navbar/>
+        <Navbar dlr={true}/>
         <div className='container grid text-gray-700 grid-cols-2 gap-4 mt-32'>
             <img className='aspect-[8/5] rounded-xl object-cover flex-1' src='https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/12/23/0/FNmag_Huevos-Rancheros-im_s4x3.jpg.rend.hgtvcom.966.725.suffix/1382538810976.jpeg'></img>
             <div className='flex-1 flex flex-col gap-2'>

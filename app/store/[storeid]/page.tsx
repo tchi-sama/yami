@@ -6,8 +6,8 @@ import {FaStar} from "react-icons/fa6"
 
 export default function page() {
   return (
-    <div className='bg-gray-100'>
-        <Navbar/>
+    <div className='bg-gray-100 min-h-screen'>
+        <Navbar dlr={true}/>
         <div className='container '>
             <div className='relative'>
                 <img className='w-full rounded-2xl aspect-[10/3] object-cover' src='https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/2/26/2/WU1307H_stuffed-peppers_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1463506005081.jpeg'/>

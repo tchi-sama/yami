@@ -15,6 +15,7 @@ import {BsChevronCompactRight} from "react-icons/bs";
 import {FaStar} from "react-icons/fa6";
 import {FiArrowRight} from "react-icons/fi";
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 
 const AllMeals=[
@@ -48,8 +49,7 @@ export default function FeedCard() {
         event.stopPropagation();
     }
   return (
-        <div onClick={()=>router.push("/meal/test")} className='w-full cursor-pointer duration-150 group rounded-xl shadow p-3 text-gray-700 bg-white h-fit '>
-            <div className=''>
+            <div onClick={()=>router.push("/meal/test")} className='w-full cursor-pointer duration-150 group rounded-xl shadow p-3 text-gray-700 bg-white h-fit '>
                 <div className='relative overflow-hidden'>
                     <button onClick={prevMeal} className='scale-0 pr-2 flex justify-end items-center group-hover:scale-100 duration-200 ease-in-out absolute w-20 h-20 top-[50%] translate-y-[-50%] translate-x-[-50%] rounded-full bg-[#fffa]'>
                         <BsChevronCompactLeft size={35}  />
@@ -69,14 +69,11 @@ export default function FeedCard() {
                 <div className='mt-4 flex items-end justify-between gap-4'>
                         <h1 className='text-lg '>meal name</h1>
                 </div>
-                <div className='flex mt-2 justify-between items-end'>
+                <div className='flex justify-between items-end'>
                     <h1 className=' font-bold'>240 Dh</h1>
-                    <Button className='flex gap-2 bg-secondary text-gray-700 hover:text-white'>add to cart <FiArrowRight/></Button>
+                    <Button className='flex gap-2 group-hover:scale-100 scale-0 duration-200 ease-in-out'>Add <FiArrowRight/></Button>
                 </div>
             </div>
-        </div>
-
-
 
   )
 }
