@@ -1,0 +1,28 @@
+{
+    name,
+    rating:{
+        number,
+        overall
+    },
+    description,
+
+    hoursOfOperation:[
+        {from:,to}
+    ],
+
+    jobTime:[
+
+    ]
+
+    backgroundImage,
+    avatarImage,
+    location:leg
+
+    location: {
+        lat: 40.7128,
+        lng: -74.006,
+    },
+
+    
+
+}
