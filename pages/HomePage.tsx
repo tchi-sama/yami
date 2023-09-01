@@ -9,7 +9,9 @@ export default function HomePage() {
         <Navbar dlr={true}/>
         <div className='container '>
             <h1 className='text-5xl text-gray-700 font-bold'>Categories</h1>
-            <Categories/>
+            <div className=''>
+              <Categories/>
+            </div>
             <Feed/>
         </div>
     </div>

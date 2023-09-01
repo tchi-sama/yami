@@ -22,21 +22,30 @@ import StoreCard from "@/components/global/StoreCard";
 
 
 const store = {
-                storename: "Sample Store 1",
-                location: {
-                  lat: 40.7128,
-                  lng: -74.006,
-                },
-                rating: {
-                  rating: 4.5,
-                  numberofRaters: 120,
-                },
-                storeimage: "sample_image1.jpg",
-                storeAvatar: "avatar1.jpg",
-                description:
-                  "A trendy store offering a wide range of products.",
-                isopen: true,
-              }
+    storeName: "Pizza Delight",
+    id: 12345,
+    rating: {
+        rating: 4.5,
+        numberOfRaters: 250,
+    },
+    description: "A cozy pizzeria serving delicious, handcrafted pizzas.",
+    hourOfWorkInWeek: {
+        Monday: "10:00 AM - 10:00 PM",
+        Tuesday: "10:00 AM - 10:00 PM",
+        Wednesday: "10:00 AM - 10:00 PM",
+        Thursday: "10:00 AM - 10:00 PM",
+        Friday: "10:00 AM - 11:00 PM",
+        Saturday: "11:00 AM - 11:00 PM",
+        Sunday: "11:00 AM - 10:00 PM",
+    },
+    jobTime: ["Full-time", "Part-time"],
+    backgroundImage: "url('pizza_store_background.jpg')",
+    avatarImage: "url('pizza_store_logo.png')",
+    location: {
+        lat: 40.7128,
+        lng: -74.006,
+    },
+}
 
 export default function page() {
   const { isLoaded } = useLoadScript({

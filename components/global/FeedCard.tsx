@@ -103,7 +103,7 @@ export default function FeedCard() {
         <h1 className=" font-bold">240 Dh</h1>
         <Dialog>
           <DialogTrigger
-            className="flex items-center bg-primary  px-4 rounded-xl text-white py-2 gap-2 group-hover:scale-100 scale-0 duration-200 ease-in-out"
+            className="flex items-center bg-primary px-4 rounded-xl text-white py-2 gap-2 group-hover:scale-100 scale-0 duration-200 ease-in-out"
             onClick={(e: any) => e.stopPropagation()}
           >
             Add <FiArrowRight />
