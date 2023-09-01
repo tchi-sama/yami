@@ -26,7 +26,7 @@ export default function Categories() {
         {
             categories.map((category,i)=>{
                 return(
-                    <button onClick={()=>setCatSelected(i)} key={i} className={`px-4 py-2 ${i==catSelected?"bg-green-500 text-white":"bg-white"} flex-shrink-0 rounded-lg ml-2`}>{category.name}</button>
+                    <button onClick={()=>setCatSelected(i)} key={i} className={`px-4 py-2 ${i==catSelected?"bg-gray-900 text-white":"bg-white"} flex-shrink-0 rounded-lg ml-2`}>{category.name}</button>
                 )
             })
         }

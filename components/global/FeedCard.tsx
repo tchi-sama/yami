@@ -14,6 +14,7 @@ import {BsChevronCompactLeft} from "react-icons/bs";
 import {BsChevronCompactRight} from "react-icons/bs";
 import {FaStar} from "react-icons/fa6";
 import {FiArrowRight} from "react-icons/fi";
+import { useRouter } from 'next/navigation';
 
 
 const AllMeals=[
@@ -37,6 +38,7 @@ const AllMeals=[
 
 export default function FeedCard() {
     const [meal,setMeal]=useState(0);
+    const router = useRouter()
     const nextMeal=(event:any)=>{
         setMeal(p=>(p+1<AllMeals.length?p+1:0))
         event.stopPropagation();
@@ -46,26 +48,8 @@ export default function FeedCard() {
         event.stopPropagation();
     }
   return (
-        <div onClick={()=>alert("hello")} className='w-full cursor-pointer duration-150 group rounded-xl shadow p-4 text-gray-700 bg-white h-fit '>
-            <div className='flex justify-between items-start'>
-                <div className='flex gap-1'>
-                    <Avatar>
-                        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                        <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
-                    <div className='flex ml-4 flex-col'>
-                        <span className='font-bold text-gray-700'>user name</span>
-                        <div className='mt-[-4px] text-gray-500 flex gap-1 items-center'> 
-                            <FaLocationDot size={12}/>
-                            <span>marrakech</span>
-                        </div>
-                    </div>
-                </div>
-                <button className='p-1 hover:bg-gray-100 rounded-md'>
-                    <MdMoreHoriz size={25} color={"#333"}/>
-                </button>
-            </div>
-            <div className='mt-4'>
+        <div onClick={()=>router.push("/meal/test")} className='w-full cursor-pointer duration-150 group rounded-xl shadow p-3 text-gray-700 bg-white h-fit '>
+            <div className=''>
                 <div className='relative overflow-hidden'>
                     <button onClick={prevMeal} className='scale-0 pr-2 flex justify-end items-center group-hover:scale-100 duration-200 ease-in-out absolute w-20 h-20 top-[50%] translate-y-[-50%] translate-x-[-50%] rounded-full bg-[#fffa]'>
                         <BsChevronCompactLeft size={35}  />
@@ -83,16 +67,12 @@ export default function FeedCard() {
                     </div>
                 </div>
                 <div className='mt-4 flex items-end justify-between gap-4'>
-                        <div>
-                            <h1 className='text-lg font-bold'>{AllMeals[meal].name}</h1>
-                            <h1 className='text-sm font-semibold text-gray-500'>6.5 km , 30 min , 0 dh delivery fee</h1>
-                            <h1 className='text-sm font-semibold text-gray-500 flex items-center'>4.6 <FaStar className="inline-block ml-1 mr-2"/> (320) </h1>
-                        </div>
-                        <h1 className='text-lg font-bold'>240 Dh</h1>
+                        <h1 className='text-lg '>meal name</h1>
                 </div>
-                {/* <div className='flex mt-2 justify-end '>
-                    <Button className='flex gap-2 bg-secondary text-gray-700 hover:text-white'>open <FiArrowRight/></Button>
-                </div> */}
+                <div className='flex mt-2 justify-between items-end'>
+                    <h1 className=' font-bold'>240 Dh</h1>
+                    <Button className='flex gap-2 bg-secondary text-gray-700 hover:text-white'>add to cart <FiArrowRight/></Button>
+                </div>
             </div>
         </div>
 
